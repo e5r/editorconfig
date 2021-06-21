@@ -1,0 +1,25 @@
+# top-most https://EditorConfig.org file
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = crlf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{json,csproj,xml}]
+insert_final_newline = ignore
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.cs]
+#### .NET Coding Conventions ####
+dotnet_separate_import_directive_groups = true
+dotnet_sort_system_directives_first = true
+file_header_template = Copyright (c) {CompanyName}. All rights reserved.\nThis file is a part of {ProjectName}.\nLicensed under the {LicenseName}: {LicenseUrl}.
+
+dotnet_analyzer_diagnostic.category-Style.severity = warning
